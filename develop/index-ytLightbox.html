@@ -9,6 +9,9 @@
 <script type="text/javascript" src="../reels/scripts/html5lightbox/html5lightbox.js"></script>
 <script src="../reels/scripts/1.js" type="text/JavaScript"></script>
 
+<script type="text/javascript" src="../reels/scripts/ytLightbox/ytLightbox.js"></script>
+<link rel="stylesheet" href="../reels/scripts/ytLightbox/ytLightbox.css" type="text/css" media="screen" />
+
 <script type="text/javascript" src="../reels/scripts/lightbox/prototype.js"></script>
 <script type="text/javascript" src="../reels/scripts/lightbox/scriptaculous.js%3Fload=effects,builder"></script>
 <script type="text/javascript" src="../reels/scripts/lightbox/lightbox.js"></script>
@@ -55,6 +58,32 @@ a:hover{ color:#fff; }
 <body>
 
 
+<!-- ytLightbox -->
+<div id="container">
+	<center>
+	<p>Open the lightbox with below button</p>
+	<button id="playme" onclick="revealVideo('video','youtube')">Play Video</button>
+	</center>
+</div>
+
+<div id="video" class="lightbox" onclick="hideVideo('video','youtube')">
+	<div class="lightbox-container">  
+	<div class="lightbox-content">
+		
+		<button onclick="hideVideo('video','youtube')" class="lightbox-close">
+		Close | ✕
+		</button>
+		<div class="video-container">
+		<!-- <iframe id="youtube" width="960" height="540" src="https://www.youtube.com/embed/WsptdUFthWI?showinfo=0" frameborder="0" allowfullscreen></iframe> -->
+		<iframe id="youtube" width="1500" height="844" src="https://youtu.be/pn51A7-cG_w" frameborder="0" allowfullscreen></iframe>
+		</div>      
+		
+	</div>
+	</div>
+</div>
+
+
+
 <br><br>
 
 <div style="float:left">
@@ -74,7 +103,8 @@ a:hover{ color:#fff; }
 
 <br style="clear:both"><br><br>
 
-<div class="videothumb di"><a href="{% include youtube.html id="pn51A7-cG_w" %}" data-width="1500" data-height="844" class="html5lightbox">
+<div class="videothumb di"><a href="https://youtu.be/pn51A7-cG_w" id="playme" onclick="revealVideo('video','youtube')">
+<!-- <a href="https://youtu.be/pn51A7-cG_w" data-width="1500" data-height="844" class="html5lightbox"> -->
 <!-- http://player.vimeo.com/video/711750834?h=c518ab00ea&title=0&amp;byline=0&amp;portrait=0 -->
 <img src="../reels/img22/spellsprites2-550.png" width="275" height="155">
 <br><strong class="job">Magic Wand Toy Prototype</strong>
@@ -160,9 +190,6 @@ Mix cool clips, record your mix and play it back. Then enter your recording to w
 -->
 
 
-
-
-{% include youtube.html id="pn51A7-cG_w" %}
 
 
 
