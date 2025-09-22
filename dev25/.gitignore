@@ -1,0 +1,29 @@
+# Logs
+*.log
+server.log
+
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Node modules (if any)
+node_modules/
+
+# Build outputs
+dist/
+build/
