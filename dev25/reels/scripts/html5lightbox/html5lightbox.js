@@ -705,7 +705,7 @@ function loadHtml5LightBox(jsFolder) {
 			    if ( match && match[7] && (match[7].length==11) )
 			        youtubeId = match[7];
 			   
-			    return 'http://www.youtube.com/embed/' + youtubeId;
+			    return 'https://www.youtube.com/embed/' + youtubeId;
 			};
 			
 			/**
