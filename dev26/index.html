@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tom Shepherd — Rust & Web3 Engineer</title>
+  <meta name="description"
+    content="Founding engineer building self-custody infrastructure for AI agents. Rust, Solana, NEAR, smart contracts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <header>
+    <div class="container header-inner">
+      <span class="logo">tom shepherd</span>
+      <nav>
+        <a href="#projects">projects</a>
+        <a href="#about">about</a>
+        <a href="https://github.com/tom9000" target="_blank" rel="noopener">github</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>building <span class="accent">crypto apps</span><br>with ai integrations</h1>
+      <p class="hero-sub">Founding engineer focused on smart contracts, cross-chain bridges, and on-chain policy
+        enforcement. Rust, Solana, NEAR.</p>
+      <div class="hero-stack">
+        <span class="tag">Rust</span>
+        <span class="tag">Solana</span>
+        <span class="tag">NEAR</span>
+        <span class="tag">Smart Contracts</span>
+        <span class="tag">WASM</span>
+        <span class="tag">TypeScript</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <p class="section-label">Projects</p>
+
+      <div class="bento">
+
+        <!-- Flagship: Holder -->
+        <div class="card card--flagship">
+          <div class="card-label">Founding Engineer</div>
+          <div class="flagship-inner">
+            <div class="flagship-content">
+              <h3>holder</h3>
+              <p>Self-custody crypto wallet for AI agent payments. Browser-held keys with API access for agents,
+                enforced by on-chain smart contract policy — spending limits, destination allowlists, and per-period
+                caps.</p>
+              <div class="card-tech">
+                <span>Rust</span>
+                <span>NEAR</span>
+                <span>WASM</span>
+                <span>MPC</span>
+                <span>Solana</span>
+                <span>EVM</span>
+                <span>x402</span>
+              </div>
+              <div class="card-links">
+                <a href="https://holder.bot/" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <line x1="2" y1="12" x2="22" y2="12" />
+                    <path
+                      d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                  </svg>
+                  holder.bot
+                </a>
+                <a href="https://github.com/holder-bot/wallet-testnet" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                  </svg>
+                  source
+                </a>
+                <a href="https://x.com/holder_bot" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M20 4l-6.768 6.768" />
+                  </svg>
+                  @holder_bot
+                </a>
+              </div>
+            </div>
+            <div class="flagship-highlights">
+              <div class="highlight-item">
+                <span class="dot"></span>
+                <span>On-chain policy enforcement — spending limits, allowlists, per-period caps</span>
+              </div>
+              <div class="highlight-item">
+                <span class="dot"></span>
+                <span>Multi-chain MPC signing across Solana, Ethereum, Base, Hedera</span>
+              </div>
+              <div class="highlight-item">
+                <span class="dot"></span>
+                <span>Browser-held root keys with delegated subkey architecture</span>
+              </div>
+              <div class="highlight-item">
+                <span class="dot"></span>
+                <span>x402 open-standard payment protocol integration</span>
+              </div>
+              <div class="highlight-item">
+                <span class="dot"></span>
+                <span>Rust smart contract compiled to WASM, published for security review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bridge POC -->
+        <div class="card card--half">
+          <div>
+            <div class="card-label">Cross-chain Infrastructure</div>
+            <h3>Optimistic Solana Bridge</h3>
+            <p>Proof-of-concept optimistic verifier for Solana-to-NEAR cross-chain transfers. Relayer submits claims
+              with bonds, a challenge window opens, and unchallenged claims finalize — enabling trustless bridging
+              without on-chain Solana state proof validation.</p>
+          </div>
+          <div>
+            <div class="card-tech">
+              <span>Rust</span>
+              <span>NEAR</span>
+              <span>Solana Anchor</span>
+              <span>Node.js</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/tom9000/near-bridge-optimistic-sol" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+                source
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Governance AMM -->
+        <div class="card card--half">
+          <div>
+            <div class="card-label">DeFi Protocol</div>
+            <h3>Governance AMM</h3>
+            <p>Solana automated market maker with governance-tiered fee discounts. Holders of a governance token above a
+              configurable threshold receive reduced swap fees. Constant product formula with full liquidity lifecycle —
+              initialize, add, swap, remove.</p>
+          </div>
+          <div>
+            <div class="card-tech">
+              <span>Rust</span>
+              <span>Solana Anchor</span>
+              <span>SPL Token</span>
+              <span>TypeScript</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/tom9000/governance-amm" target="_blank" rel="noopener">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <path
+                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+                </svg>
+                source
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <p class="section-label">About</p>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a software engineer specializing in Rust, smart contracts, and cross-chain infrastructure. Currently
+            the founding engineer at Holder, where I'm building self-custody wallet infrastructure that lets AI agents
+            make crypto payments with on-chain policy enforcement.</p>
+          <p>My work spans NEAR and Solana ecosystems — from MPC-based multi-chain signing to optimistic bridge
+            verification and DeFi protocol design. I focus on systems where security guarantees are enforced by code,
+            not trust.</p>
+        </div>
+        <div class="about-links">
+          <a class="about-link" href="https://github.com/tom9000" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" />
+            </svg>
+            github.com/tom9000
+          </a>
+          <a class="about-link" href="https://x.com/holder_bot" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M20 4l-6.768 6.768" />
+            </svg>
+            @holder_bot
+          </a>
+          <a class="about-link" href="https://holder.bot/" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <line x1="2" y1="12" x2="22" y2="12" />
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+            </svg>
+            holder.bot
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container footer-inner">
+      <span>Tom Shepherd</span>
+      <span>2026</span>
+    </div>
+  </footer>
+
+</body>
+
+</html>
