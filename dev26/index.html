@@ -158,18 +158,19 @@
                 <div class="card card--half">
                     <div>
                         <div class="card-label">Distributed Systems</div>
-                        <h3>Networked Device Coordinator Model</h3>
+                        <h3>Real Time Device Network Model</h3>
                         <p>Rust WebSocket server ingesting real-time device telemetry
                             (accelerometer), demultiplexes by device ID, runs
                             program logic, and streams state + debug events back to the
                             UI. Used for validating system requirements and memory health metrics
-                            (RSS/heap, active tasks/devices).</p>
+                            (Active tasks/devices).</p>
                     </div>
                     <div>
                         <div class="card-tech">
-                            <span>Rust Server</span>
                             <span>Device Controller</span>
-                            <span>Axum Server</span>
+                            <span>Rust Networking</span>
+                            <span>Tokio</span>
+                            <span>Axum</span>
                             <span>Real-time UI</span>
                         </div>
                         <div class="card-links">
