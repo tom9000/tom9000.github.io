@@ -91,6 +91,15 @@
                                 </svg>
                                 source
                             </a>
+                            <a href="javascript:void(0)" onclick="openModal('holder-demo-260423.jpg')">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                    <circle cx="8.5" cy="8.5" r="1.5" />
+                                    <polyline points="21 15 16 10 5 21" />
+                                </svg>
+                                screenshot
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -256,6 +265,28 @@
         </div>
     </footer>
 
+    <!-- Screenshot Modal -->
+    <div id="image-modal" class="modal-overlay" onclick="closeModal(event)">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal(event, true)">&times;</button>
+            <img id="modal-image" src="" alt="Screenshot">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modal-image').src = imageSrc;
+            document.getElementById('image-modal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(event, force = false) {
+            if (force || event.target.id === 'image-modal' || event.target.id === 'modal-image') {
+                document.getElementById('image-modal').classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+    </script>
 </body>
 
 </html>
